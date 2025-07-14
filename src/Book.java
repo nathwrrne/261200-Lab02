@@ -3,6 +3,7 @@ public class Book {
     String author;
     double price;
 
+    //sets as default
     Book() {
         this("Unknown title", "Unknown author", 0.0);
     }
@@ -23,11 +24,12 @@ public class Book {
         System.out.println("Price: " + this.price);
     }
 
+    //update price(check if it correct price)
     public void updatePrice(double newPrice) {
         if (newPrice >= 0) {
             this.price = newPrice;
         } else {
-            System.out.println("Price Invalid. Show original price.");
+            System.out.println("Price Invalid. Show original price."); // if it's negative price, returns original price
         }
     }
 
